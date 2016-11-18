@@ -14,8 +14,8 @@ gem 'builder'
 
 gem 'dotenv'
 
-gem 'stock_quote'
-gem 'giphy'
+# gem 'stock_quote'
+# gem 'giphy'
 
 group :development, :test do
   gem 'sqlite3'
@@ -27,7 +27,3 @@ end
 
 gem 'dotenv-rails', :groups => [:development, :test]
 gem 'twilio-ruby'
-
-#
-# gem 'giphy'
-# gem 'stock_quote'
