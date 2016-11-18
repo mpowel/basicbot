@@ -12,6 +12,7 @@ gem 'json'
 gem 'haml'
 gem 'builder'
 
+gem 'dotenv'
 
 group :development, :test do
   gem 'sqlite3'

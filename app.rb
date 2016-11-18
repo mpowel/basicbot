@@ -5,6 +5,7 @@ require "active_support/core_ext"
 require 'sinatra/activerecord'
 require 'rake'
 # require 'pg'
+require 'dotenv'
 
 require 'twilio-ruby'
 # require 'stock_quote'

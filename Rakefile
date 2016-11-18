@@ -21,7 +21,7 @@ task :send_trending_giphy do
     
     client.account.messages.create(
       :from => ENV["TWILIO_FROM"],
-      :to => "+14803308165",
+      :to => "+12067130783",
       :body => "Here's a little something to brighten your day. A trending gif from Giphy.",
       :media_url => gif
     )
