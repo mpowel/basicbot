@@ -38,3 +38,19 @@ get "/from" do
   ENV["TWILIO_FROM"]
 end
 
+
+# Test sending an SMS
+# change the to to your number 
+
+get "/send_sms" do
+
+  client.account.messages.create(
+    :from => "+14152002424",
+    :to => "+12067130783",
+    :body => "Hey there. This is a test"
+  )
+
+  "Sent message"
+  
+end
+
