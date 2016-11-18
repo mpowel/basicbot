@@ -3,7 +3,7 @@ require "sinatra"
 require 'shotgun'
 require 'active_support/all'
 require "active_support/core_ext"
-require 'sinatra/activerecord'
+# require 'sinatra/activerecord'
 require 'rake'
 # require 'pg'
 
