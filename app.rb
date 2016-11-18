@@ -54,3 +54,38 @@ get "/send_sms" do
   
 end
 
+
+# Hook this up to your Webhook for SMS/MMS through the console
+
+get '/incoming_sms' do
+
+  session["counter"] ||= 0
+  count = session["counter"]
+  
+  sender = params[:From] || ""
+  body = params[:Body] || ""
+  body = body.downcase.strip
+
+  if session["counter"] < 1
+    message = "Thanks for your first message. From #{sender} saying #{body}"
+  else
+    message = "Thanks for message number #{ count }. From #{sender} saying #{body}"
+  end
+  
+  session["counter"] += 1
+  
+  twiml = Twilio::TwiML::Response.new do |r|
+    r.Message message
+  end
+
+  content_type 'text/xml'
+
+  twiml.text
+
+end
+
+error 401 do 
+  "Not allowed!!!"
+end
+
+
