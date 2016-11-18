@@ -76,3 +76,34 @@ end
 
 
 private 
+
+
+
+
+GREETINGS = ["Hi","Yo", "Hey","Howdy", "Hello", "Ahoy", "‘Ello", "Aloha", "Hola", "Bonjour", "Hallo", "Ciao", "Konnichiwa"]
+
+COMMANDS = "hi, who, what, where, when, why and play."
+
+def get_commands
+  error_prompt = ["I know how to: ", "You can say: ", "Try asking: "].sample
+  
+  return error_prompt + COMMANDS
+end
+
+def get_greeting
+  return GREETINGS.sample
+end
+
+def get_about_message
+  get_greeting + ", I\'m SMSBot 🤖. " + get_commands
+end
+
+def get_help_message
+  "You're stuck, eh? " + get_commands
+end
+
+def error_response
+  error_prompt = ["I didn't catch that.", "Hmmm I don't know that word.", "What did you say to me? "].sample
+  error_prompt + " " + get_commands
+end
+
