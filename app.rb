@@ -8,8 +8,8 @@ require 'rake'
 # require 'pg'
 
 require 'twilio-ruby'
-# require 'stock_quote'
-# require 'giphy'
+require 'stock_quote'
+require 'giphy'
 
 # Load environment variables using Dotenv. If a .env file exists, it will
 # set environment variables from that file (useful for dev environments)

@@ -14,6 +14,9 @@ gem 'builder'
 
 gem 'dotenv'
 
+gem 'stock_quote'
+gem 'giphy'
+
 group :development, :test do
   gem 'sqlite3'
 end
